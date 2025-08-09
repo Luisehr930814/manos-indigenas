@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manos Indígenas | Arte que inspira</title>
+  <meta name="description" content="Tienda de artesanías auténticas. Piezas únicas de Textiles, Joyería, Cerámica y Accesorios." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="img/logo.svg" />
+  <!-- Open Graph / Social preview -->
+  <meta property="og:title" content="Manos Indígenas - Arte que inspira" />
+  <meta property="og:description" content="Descubre artesanías únicas hechas por manos indígenas." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1546238232-20216deccee8?fit=crop&w=800&q=80" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Encabezado con logo y navegación -->
+  <header>
+    <nav class="container nav-container">
+      <div class="logo">
+        <img src="img/logo.svg" alt="Manos Indígenas" />
+        <span>Manos Indígenas</span>
+      </div>
+      <button class="menu-toggle" aria-label="Abrir menú">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <h1>Arte único creado por manos indígenas</h1>
+      <p>Descubre piezas auténticas y apoya a las comunidades artesanas.</p>
+      <a href="#catalogo" class="btn btn-primary">Ver catálogo</a>
+    </div>
+  </section>
+
+  <!-- Catálogo Section -->
+  <section id="catalogo" class="catalogo section">
+    <div class="container">
+      <h2>Catálogo</h2>
+      <div class="filters">
+        <button class="filter active" data-filter="all">Todo</button>
+        <button class="filter" data-filter="textiles">Textiles</button>
+        <button class="filter" data-filter="joyeria">Joyería</button>
+        <button class="filter" data-filter="ceramica">Cerámica</button>
+        <button class="filter" data-filter="accesorios">Accesorios</button>
+      </div>
+      <div class="product-grid">
+        <!-- Producto: Textil -->
+        <div class="product-card" data-category="textiles">
+          <img src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?fit=crop&w=800&q=80" alt="Chal tejido artesanal" loading="lazy" />
+          <h3>Chal tejido</h3>
+          <p class="price">$35 USD</p>
+          <a href="https://wa.me/521234567890?text=Hola%20quiero%20comprar%20Chal%20tejido" class="btn btn-secondary">Comprar</a>
+        </div>
+        <!-- Producto: Joyería -->
+        <div class="product-card" data-category="joyeria">
+          <img src="https://images.unsplash.com/photo-1505330622279-bf7d7fc918f4?fit=crop&w=800&q=80" alt="Collar artesanal" loading="lazy" />
+          <h3>Collar de cuentas</h3>
+          <p class="price">$28 USD</p>
+          <a href="https://wa.me/521234567890?text=Hola%20quiero%20comprar%20Collar%20de%20cuentas" class="btn btn-secondary">Comprar</a>
+        </div>
+        <!-- Producto: Cerámica -->
+        <div class="product-card" data-category="ceramica">
+          <img src="https://images.unsplash.com/photo-1529923309481-6244124017f0?fit=crop&w=800&q=80" alt="Cerámica artesanal" loading="lazy" />
+          <h3>Taza de barro</h3>
+          <p class="price">$20 USD</p>
+          <a href="https://wa.me/521234567890?text=Hola%20quiero%20comprar%20Taza%20de%20barro" class="btn btn-secondary">Comprar</a>
+        </div>
+        <!-- Producto: Accesorios -->
+        <div class="product-card" data-category="accesorios">
+          <img src="https://images.unsplash.com/photo-1606848032775-7f4482d47872?fit=crop&w=800&q=80" alt="Pulsera artesanal" loading="lazy" />
+          <h3>Pulsera tejida</h3>
+          <p class="price">$15 USD</p>
+          <a href="https://wa.me/521234567890?text=Hola%20quiero%20comprar%20Pulsera%20tejida" class="btn btn-secondary">Comprar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Nosotros -->
+  <section id="nosotros" class="nosotros section">
+    <div class="container">
+      <h2>Quiénes somos</h2>
+      <p>
+        Somos una cooperativa de artesanos indígenas dedicados a preservar nuestras
+        tradiciones y compartir el arte que llevamos en la sangre. Cada pieza que
+        creamos es única y refleja la riqueza cultural de nuestras comunidades.
+      </p>
+    </div>
+  </section>
+
+  <!-- Testimonios -->
+  <section id="testimonios" class="testimonios section">
+    <div class="container">
+      <h2>Testimonios</h2>
+      <div class="testimonios-grid">
+        <div class="testimonio">
+          <p>"Recibí mi pulsera y está hermosa. Se nota el amor con el que fue hecha."</p>
+          <span>- Ana, California</span>
+        </div>
+        <div class="testimonio">
+          <p>"Las cerámicas son increíbles, piezas únicas que decoran mi hogar."</p>
+          <span>- Marco, Nevada</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto / Footer -->
+  <footer id="contacto" class="footer">
+    <div class="container footer-content">
+      <p>© 2025 Manos Indígenas. Todos los derechos reservados.</p>
+      <a href="https://wa.me/521234567890?text=Hola%20me%20interesan%20sus%20artesanias" class="btn btn-primary">Contáctanos en WhatsApp</a>
+    </div>
+  </footer>
+</body>
+</html>
