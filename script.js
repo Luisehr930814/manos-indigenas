@@ -1,29 +1,33 @@
-// Manejo de filtro de productos
+// Simple slider functionality for the hero section
 document.addEventListener('DOMContentLoaded', () => {
-  const filterButtons = document.querySelectorAll('.filter');
-  const productCards = document.querySelectorAll('.product-card');
+  const slides = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.hero-nav .dot');
+  let currentSlide = 0;
 
-  filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      // Cambiar clase activa
-      filterButtons.forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
-      const filter = button.dataset.filter;
-      productCards.forEach(card => {
-        if (filter === 'all' || card.dataset.category === filter) {
-          card.style.display = '';
-        } else {
-          card.style.display = 'none';
-        }
-      });
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+    });
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === index);
+    });
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  // Initialize first slide
+  showSlide(currentSlide);
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      currentSlide = i;
+      showSlide(currentSlide);
     });
   });
 
-  // Menú hamburguesa para móviles
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.nav-links');
-  menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    menuToggle.classList.toggle('active');
-  });
+  // Auto‑slide every 5 seconds
+  setInterval(nextSlide, 5000);
 });
